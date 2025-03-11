@@ -1,0 +1,119 @@
+<!-- Modified Home Section -->
+<section class="home" id="home">
+    <div class="max-width">
+        <div class="home-content">
+            <div class="text-1">Crafting Digital Excellence</div>
+            <div class="text-2">SINGETAN TOLERA</div>
+            <div class="text-3">Award-Winning <span class="typing"></span></div>
+            
+            <!-- New Hire Me Essay Container -->
+            <div class="hire-essay">
+                <h1 class="pulse-text">Transform Your Digital Presence</h1>
+                <p class="highlight-paragraph">
+                    As a certified <strong>Front-End Developer </strong> with 3+ years of experience building 
+                    <span class="tech-badge">React.js</span> 
+                    <span class="tech-badge">Vue.js</span> 
+                    <span class="tech-badge">PHP</span> solutions, I turn complex challenges into seamless digital experiences. 
+                    Featured in 10+ successful projects with 35% engagement boosts, I bring:
+                </p>
+                <ul class="selling-points">
+                    <li><i class="fas fa-rocket"></i> Mobile-first responsive designs</li>
+                    <li><i class="fas fa-lock"></i> Secure & scalable architecture</li>
+                    <li><i class="fas fa-chart-line"></i> Performance-optimized solutions</li>
+                </ul>
+                
+                <a href="Hire me.html" class="glow-button">
+                    <i class="fas fa-handshake"></i> Let's Build Something Amazing →
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+/* New CSS Additions */
+.hire-essay {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(220, 20, 60, 0.3);
+    margin-top: 2rem;
+    animation: slideUp 1s ease;
+}
+
+.pulse-text {
+    color: #2c3e50;
+    font-size: 2.5rem;
+    text-align: center;
+    animation: pulse 2s infinite;
+}
+
+.highlight-paragraph {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin: 1.5rem 0;
+    color: #34495e;
+}
+
+.tech-badge {
+    display: inline-block;
+    background: crimson;
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    margin: 0 0.3rem;
+    font-size: 0.9rem;
+}
+
+.selling-points {
+    list-style: none;
+    padding: 1rem 0;
+}
+
+.selling-points li {
+    margin: 1rem 0;
+    font-size: 1.1rem;
+    padding: 0.8rem;
+    background: #f8f9fa;
+    border-left: 4px solid crimson;
+}
+
+.glow-button {
+    display: inline-flex;
+    align-items: center;
+    background: linear-gradient(135deg, #c0392b, #e74c3c);
+    color: white!important;
+    padding: 1rem 2.5rem;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    margin-top: 1rem;
+}
+
+.glow-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(220, 20, 60, 0.4);
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@media (max-width: 768px) {
+    .pulse-text {
+        font-size: 1.8rem;
+    }
+    
+    .hire-essay {
+        padding: 1.5rem;
+    }
+}
+</style>

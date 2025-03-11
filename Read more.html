@@ -1,0 +1,169 @@
+<!-- Skills Section Enhancement -->
+<section class="skills" id="skills">
+    <div class="max-width">
+        <h2 class="title">My skills</h2>
+        <div class="skills-content">
+            <div class="column left">
+                <div class="text">Technical Expertise & Innovation</div>
+                <p class="skill-intro">With 3+ years shaping digital experiences...</p>
+                
+                <!-- Read More Content -->
+                <div class="skill-expansion">
+                    <div class="expertise-grid">
+                        <div class="expertise-card pulse">
+                            <i class="fas fa-medal"></i>
+                            <h3>Proven Excellence</h3>
+                            <p>Ranked in top 10% of developers on CodeReview with 10+ optimized solutions</p>
+                        </div>
+
+                        <div class="tech-stack">
+                            <div class="stack-item">
+                                <img src="images/react-icon.svg" alt="React">
+                                <span>React Specialist</span>
+                            </div>
+                            <div class="stack-item">
+                                <img src="images/node-icon.svg" alt="Node.js">
+                                <span>Node.js Expert</span>
+                            </div>
+                        </div>
+
+                        <div class="achievement-meter">
+                            <div class="meter-card">
+                                <div class="meter-value" style="--percentage: 95%"></div>
+                                <span>Project Success Rate</span>
+                            </div>
+                            <div class="meter-card">
+                                <div class="meter-value" style="--percentage: 100%"></div>
+                                <span>Client Retention</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="read-more-toggle">
+                    <span class="toggle-text">Show Expertise Details</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+            </div>
+            <!-- Existing skills bars column -->
+        </div>
+    </div>
+</section>
+
+<style>
+/* Skills Expansion CSS */
+.skill-expansion {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.skill-expansion.active {
+    max-height: 1000px;
+    padding-top: 2rem;
+}
+
+.expertise-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.expertise-card {
+    background: rgba(255,255,255,0.95);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(220,20,60,0.1);
+    border-left: 4px solid crimson;
+}
+
+.tech-stack {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.stack-item {
+    display: flex;
+    align-items: center;
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.stack-item:hover {
+    transform: translateY(-5px);
+}
+
+.achievement-meter {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.meter-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+}
+
+.meter-value {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: var(--percentage);
+    background: rgba(220,20,60,0.1);
+    z-index: 1;
+}
+
+.read-more-toggle {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: crimson;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    margin-top: 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.read-more-toggle:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(220,20,60,0.2);
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+@media (max-width: 768px) {
+    .expertise-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+
+<script>
+// Add to script.js
+document.querySelector('.read-more-toggle').addEventListener('click', function() {
+    const expansion = document.querySelector('.skill-expansion');
+    const toggle = this.querySelector('.toggle-text');
+    
+    expansion.classList.toggle('active');
+    toggle.textContent = expansion.classList.contains('active') 
+        ? 'Hide Expertise Details' 
+        : 'Show Expertise Details';
+    
+    this.querySelector('i').classList.toggle('fa-chevron-up');
+});
+</script>
